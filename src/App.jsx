@@ -9,6 +9,7 @@ import {
   Database,
   Download,
   GraduationCap,
+  Layers3,
   Languages,
   Laptop,
   Mail,
@@ -17,9 +18,12 @@ import {
   Phone,
   Rocket,
   Server,
+  ShieldCheck,
   Sparkles,
+  Target,
   UserRound,
   X,
+  Zap,
 } from "lucide-react";
 
 const profile = {
@@ -27,18 +31,21 @@ const profile = {
   initials: "TBW",
   photo: "/profile.png",
   age: "26 years old",
-  headline: "Software Engineering Undergraduate",
+  headline: "Software Engineering Graduate",
   roleLine:
     "Aspiring Software Engineer | Full-Stack Developer | Web Application Developer",
   summary:
-    "Software Engineering undergraduate with a strong interest in full-stack web development, database-driven systems, and practical business applications. I am focused on building clean, user-friendly, and reliable software solutions using modern web technologies.",
-  location: "260/1/2, Balummahara, Ibulgoda",
+    "Software Engineering graduate with a Second Class Upper Division (2.1) degree and hands-on experience building full-stack, database-driven web applications. I enjoy creating clean interfaces, reliable backend workflows, and practical software that solves real business and user problems.",
+  location: "260/1/2, Balummahara, Ibulgoda, Sri Lanka",
   email: "Bandare786thi@yahoo.com",
   phone: "0771326533",
-   careerTarget: "Junior Software Engineer / Full-Stack Web Developer",
-  workType: "Open to full-time, internship, remote, and junior developer roles",
+  careerTarget: "Junior Software Engineer / Full-Stack Web Developer",
+  mainStack: "React, JavaScript, Java, FastAPI, MySQL, PostgreSQL",
+  workType: "Open to full-time, remote, internship, and junior developer roles",
   availability:
-    "Open to Software Engineering, Full-Stack, Front-End, Back-End, and Web Developer opportunities",
+    "Available for Software Engineering, Full-Stack, Front-End, Back-End, and Web Developer opportunities",
+  degree:
+    "Bachelor of Computing in Software Engineering — Second Class Upper Division (2.1)",
 };
 
 const navItems = [
@@ -51,6 +58,13 @@ const navItems = [
   "Contact",
 ];
 
+const quickStats = [
+  { value: "2.1", label: "Degree Classification" },
+  { value: "2", label: "Major Projects" },
+  { value: "Full-Stack", label: "Career Focus" },
+  { value: "ICBT", label: "Software Engineering" },
+];
+
 const techStack = [
   { name: "Java", icon: Code2 },
   { name: "JavaScript", icon: Code2 },
@@ -60,43 +74,42 @@ const techStack = [
   { name: "PostgreSQL", icon: Database },
   { name: "FastAPI", icon: Server },
   { name: "REST APIs", icon: Server },
+  { name: "JWT", icon: ShieldCheck },
+  { name: "UI / UX", icon: Layers3 },
 ];
 
 const skills = [
   {
-    title: "Software Development",
+    title: "Frontend Development",
     description:
-      "Programming fundamentals, web application development, UI implementation, and structured problem solving.",
-    items: ["Java", "JavaScript", "React", "HTML", "CSS", "REST APIs"],
-    icon: Code2,
+      "Creating responsive, modern, and user-friendly interfaces with clean layouts and reusable components.",
+    items: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Responsive UI"],
+    icon: Laptop,
+    level: 86,
   },
   {
-    title: "Database & Backend",
+    title: "Backend & APIs",
     description:
-      "Experience with database-driven applications, server-side logic, CRUD operations, and API-based workflows.",
-    items: [
-      "MySQL",
-      "PostgreSQL",
-      "Database Design",
-      "CRUD",
-      "Server-side Logic",
-      "API Testing",
-    ],
+      "Building structured backend workflows, REST API concepts, authentication logic, and CRUD-based features.",
+    items: ["FastAPI", "Java", "REST APIs", "JWT", "CRUD", "API Testing"],
+    icon: Server,
+    level: 78,
+  },
+  {
+    title: "Database Systems",
+    description:
+      "Designing and working with relational databases for practical business and web application requirements.",
+    items: ["MySQL", "PostgreSQL", "Database Design", "Queries", "Data Accuracy", "Reports"],
     icon: Database,
+    level: 82,
   },
   {
     title: "Professional Strengths",
     description:
-      "Business experience helped build accuracy, communication, responsibility, and deadline-focused work habits.",
-    items: [
-      "Teamwork",
-      "Communication",
-      "Work Under Pressure",
-      "Deadline Management",
-      "Data Accuracy",
-      "Documentation",
-    ],
+      "A reliable work style built through accounts, data entry, documentation, and business-support experience.",
+    items: ["Teamwork", "Communication", "Accuracy", "Documentation", "Deadlines", "Problem Solving"],
     icon: Award,
+    level: 90,
   },
 ];
 
@@ -106,26 +119,28 @@ const projects = [
     subtitle: "Emotional-State Adaptive Fitness Web Application",
     type: "Full-Stack / AI-Assisted Web Project",
     description:
-      "A fitness recommendation web application that suggests workouts based on user mood, energy level, and stress level. The project includes authentication, mood tracking, workout recommendations, progress logging, and AI-assisted emotion detection concepts.",
+      "A personalized fitness web application concept that recommends workouts based on mood, energy level, and stress level. The system focuses on practical user input, intelligent recommendation flow, and progress tracking.",
     highlights: [
-      "Built a modern React-based interface for mood input, recommendations, and user progress.",
-      "Designed backend API logic to connect users, mood records, workouts, logs, and recommendation features.",
-      "Focused on solving a real user problem by personalizing fitness suggestions according to emotional state.",
+      "Built a modern React interface for mood input, workout recommendations, and progress tracking.",
+      "Designed backend API logic for users, mood records, workouts, logs, and recommendation features.",
+      "Focused on a real user problem by adapting fitness suggestions to emotional state and daily readiness.",
     ],
     tech: ["React", "FastAPI", "PostgreSQL", "JWT", "REST API", "AI Concept"],
+    impact: "Personalized fitness experience",
   },
   {
     name: "PahanaEdu",
     subtitle: "Education / Bookshop Management System",
     type: "Java Web Application",
     description:
-      "A web-based management system created to support customer handling, item or book management, billing workflows, and role-based system access.",
+      "A web-based management system designed to support customer handling, book/item management, billing workflows, and role-based access for an education/bookshop environment.",
     highlights: [
-      "Developed using Java web technologies with structured pages, business logic, and database operations.",
-      "Implemented management features such as login, customer records, item records, and billing workflows.",
-      "Practiced software engineering concepts including modular design, validation, database connectivity, and testing.",
+      "Developed structured Java web pages, business logic, and database operations.",
+      "Implemented login, customer records, item records, billing workflows, and CRUD features.",
+      "Practiced modular design, validation, database connectivity, and system testing.",
     ],
     tech: ["Java", "JSP", "Servlets", "MySQL", "MVC", "CRUD"],
+    impact: "Organized business workflow",
   },
 ];
 
@@ -154,23 +169,25 @@ const experience = [
 
 const education = [
   {
-    qualification:
-      "Undergraduate in Bachelor of Computing, Software Engineering",
+    qualification: "Bachelor of Computing in Software Engineering",
     institution: "ICBT",
+    badge: "Second Class Upper Division (2.1)",
     details:
-      "Currently following a Software Engineering pathway focused on computing fundamentals, software development, databases, and practical application development.",
+      "Completed the Software Engineering degree pathway with a Second Class Upper Division (2.1), covering computing fundamentals, software development, database systems, web application development, and practical project work.",
   },
   {
     qualification: "Spoken English Certificate Course",
     institution: "British Council",
+    badge: "Completed",
     details:
-      "Completed spoken English training to improve confidence and professional communication skills.",
+      "Completed spoken English training to improve confidence, professional communication, and presentation ability.",
   },
   {
     qualification: "Spoken English Diploma",
     institution: "Colombo University",
+    badge: "Completed",
     details:
-      "Completed diploma-level spoken English studies to strengthen English communication ability for academic and professional use.",
+      "Completed diploma-level spoken English studies to strengthen communication ability for academic and professional use.",
   },
 ];
 
@@ -186,8 +203,7 @@ const references = [
   },
   {
     name: "Mr. T G P L Weerasinghe",
-    position:
-      "Lecturer, University of Moratuwa, Department of Civil Engineering",
+    position: "Lecturer, University of Moratuwa, Department of Civil Engineering",
     phone: "777357981",
     email: "pasinduw@uom.lk",
   },
@@ -206,19 +222,19 @@ const stagger = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.1,
     },
   },
 };
 
-function SectionTitle({ eyebrow, title, description, light = false }) {
+function SectionTitle({ eyebrow, title, description, light = false, center = false }) {
   return (
     <motion.div
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className="mb-10 max-w-4xl"
+      className={`mb-10 max-w-4xl ${center ? "mx-auto text-center" : ""}`}
     >
       <p
         className={
@@ -262,16 +278,14 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 text-white shadow-2xl shadow-slate-950/10 backdrop-blur-2xl">
       <div className="mx-auto flex max-w-[1700px] items-center justify-between px-5 py-4 md:px-8">
         <a href="#home" className="flex items-center gap-3">
-          <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-cyan-300 to-blue-500 text-xs font-black text-slate-950 shadow-lg shadow-cyan-500/20">
+          <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-cyan-300 via-sky-400 to-violet-500 text-xs font-black text-slate-950 shadow-lg shadow-cyan-500/20">
             {profile.initials}
           </div>
           <div>
             <p className="text-sm font-black tracking-wide text-white">
               {profile.name}
             </p>
-            <p className="text-xs text-cyan-200">
-              Software Engineering Resume
-            </p>
+            <p className="text-xs text-cyan-200">Software Engineering Resume</p>
           </div>
         </a>
 
@@ -360,19 +374,17 @@ function FloatingCodeCards() {
         className="pointer-events-none absolute left-8 top-36 hidden w-64 rounded-3xl border border-cyan-300/20 bg-white/[0.06] p-5 text-white shadow-2xl shadow-cyan-500/10 backdrop-blur-xl 2xl:block"
       >
         <p className="text-xs font-black uppercase tracking-[0.25em] text-cyan-300">
-          Current Focus
+          Degree Status
         </p>
         <div className="mt-4 space-y-3 font-mono text-sm text-slate-300">
           <p>
-            <span className="text-cyan-300">const</span> role =
-            <span className="text-white"> "Junior Developer"</span>;
+            <span className="text-cyan-300">degree</span> =
+            <span className="text-white"> "Completed"</span>;
           </p>
           <p>
-            <span className="text-cyan-300">stack</span>.push("React");
+            <span className="text-cyan-300">class</span> = "2.1";
           </p>
-          <p>
-            api.connect(<span className="text-white">"database"</span>);
-          </p>
+          <p>career.launch(<span className="text-white">"software"</span>);</p>
         </div>
       </motion.div>
 
@@ -382,19 +394,15 @@ function FloatingCodeCards() {
         className="pointer-events-none absolute bottom-28 right-8 hidden w-72 rounded-3xl border border-blue-300/20 bg-white/[0.06] p-5 text-white shadow-2xl shadow-blue-500/10 backdrop-blur-xl 2xl:block"
       >
         <p className="text-xs font-black uppercase tracking-[0.25em] text-cyan-300">
-          Build Pipeline
+          Developer Pipeline
         </p>
         <div className="mt-4 grid gap-3">
-          {["Plan UI", "Create API", "Connect DB", "Test Features"].map(
-            (item) => (
-              <div key={item} className="flex items-center gap-3">
-                <CheckCircle2 size={17} className="text-cyan-300" />
-                <span className="text-sm font-bold text-slate-200">
-                  {item}
-                </span>
-              </div>
-            )
-          )}
+          {["Plan UI", "Create API", "Connect DB", "Test Features"].map((item) => (
+            <div key={item} className="flex items-center gap-3">
+              <CheckCircle2 size={17} className="text-cyan-300" />
+              <span className="text-sm font-bold text-slate-200">{item}</span>
+            </div>
+          ))}
         </div>
       </motion.div>
     </>
@@ -412,10 +420,11 @@ function ProfilePopupCard() {
         transition={{ duration: 0.85, delay: 0.2 }}
         className="relative"
       >
+        <div className="absolute -inset-1 rounded-[2.2rem] bg-gradient-to-br from-cyan-300/40 via-blue-500/20 to-violet-500/40 blur-2xl" />
         <motion.div
           animate={{ y: [0, -14, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="rounded-[2rem] border border-white/10 bg-white/10 p-5 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl"
+          className="relative rounded-[2rem] border border-white/10 bg-white/10 p-5 shadow-2xl shadow-cyan-500/10 backdrop-blur-xl"
         >
           <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/90 p-6">
             <div className="mb-7 flex items-center justify-between gap-5">
@@ -423,9 +432,7 @@ function ProfilePopupCard() {
                 <p className="text-sm font-semibold text-slate-400">
                   Candidate Profile
                 </p>
-                <p className="text-3xl font-black text-white">
-                  Software Engineer
-                </p>
+                <p className="text-3xl font-black text-white">Software Graduate</p>
               </div>
 
               <button
@@ -442,18 +449,23 @@ function ProfilePopupCard() {
               </button>
             </div>
 
-            <p className="mb-5 text-sm font-bold text-cyan-200">
-              Click the profile photo to view larger.
-            </p>
+            <div className="mb-5 rounded-2xl border border-cyan-300/20 bg-cyan-300/10 p-4">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">
+                Academic Achievement
+              </p>
+              <p className="mt-2 text-lg font-black text-white">
+                Second Class Upper Division (2.1)
+              </p>
+            </div>
 
             <div className="grid gap-4">
               {[
-  ["Age", profile.age],
-  ["Focus", "Full-Stack Web Development"],
-  ["Projects", "FitMind and PahanaEdu"],
-  ["Strength", "Business + software mindset"],
-  ["Goal", "Junior Software Engineering Role"],
-].map(([label, value]) => (
+                ["Age", profile.age],
+                ["Focus", "Full-Stack Web Development"],
+                ["Projects", "FitMind and PahanaEdu"],
+                ["Strength", "Business + software mindset"],
+                ["Goal", "Junior Software Engineering Role"],
+              ].map(([label, value]) => (
                 <div
                   key={label}
                   className="rounded-2xl border border-white/10 bg-white/5 p-4"
@@ -534,12 +546,7 @@ function DeveloperFocusPanel() {
   ];
 
   return (
-    <motion.div
-      variants={stagger}
-      initial="hidden"
-      animate="show"
-      className="grid gap-4"
-    >
+    <motion.div variants={stagger} initial="hidden" animate="show" className="grid gap-4">
       {items.map((item) => {
         const Icon = item.icon;
 
@@ -564,11 +571,9 @@ function DeveloperFocusPanel() {
 
 function Hero() {
   return (
-    <section
-      id="home"
-      className="relative isolate overflow-hidden bg-slate-950 text-white"
-    >
+    <section id="home" className="relative isolate overflow-hidden bg-slate-950 text-white">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:72px_72px]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.22),transparent_34%),radial-gradient(circle_at_80%_15%,rgba(99,102,241,0.2),transparent_32%),radial-gradient(circle_at_60%_90%,rgba(14,165,233,0.18),transparent_35%)]" />
 
       <motion.div
         animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.15, 1] }}
@@ -608,7 +613,7 @@ function Hero() {
 
           <motion.h1
             variants={fadeUp}
-            className="text-5xl font-black tracking-tight text-white md:text-7xl"
+            className="max-w-5xl text-5xl font-black tracking-tight text-white md:text-7xl"
           >
             {profile.name}
           </motion.h1>
@@ -622,6 +627,21 @@ function Hero() {
             </p>
           </motion.div>
 
+          <motion.div
+            variants={fadeUp}
+            className="mt-6 inline-flex flex-wrap items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur"
+          >
+            <div className="grid h-11 w-11 place-items-center rounded-2xl bg-cyan-300 text-slate-950">
+              <GraduationCap size={22} />
+            </div>
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-cyan-300">
+                Degree Completed
+              </p>
+              <p className="font-black text-white">Second Class Upper Division (2.1)</p>
+            </div>
+          </motion.div>
+
           <motion.p
             variants={fadeUp}
             className="mt-7 max-w-3xl text-base leading-8 text-slate-300 md:text-lg"
@@ -629,24 +649,14 @@ function Hero() {
             {profile.summary}
           </motion.p>
 
-          <motion.div
-            variants={fadeUp}
-            className="mt-7 grid gap-3 sm:grid-cols-3"
-          >
-            {[
-  ["26", "Years Old"],
-  ["2", "Major Projects"],
-  ["Full-Stack", "Career Focus"],
-  ["ICBT", "Software Engineering"],
-].map(([number, label]) => (
+          <motion.div variants={fadeUp} className="mt-7 grid gap-3 sm:grid-cols-4">
+            {quickStats.map((stat) => (
               <div
-                key={label}
-                className="rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur"
+                key={stat.label}
+                className="rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.09]"
               >
-                <p className="text-2xl font-black text-cyan-300">{number}</p>
-                <p className="mt-1 text-sm font-bold text-slate-300">
-                  {label}
-                </p>
+                <p className="text-2xl font-black text-cyan-300">{stat.value}</p>
+                <p className="mt-1 text-sm font-bold text-slate-300">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -687,9 +697,9 @@ function Hero() {
 
 function About() {
   const profilePoints = [
+    "Completed Bachelor of Computing in Software Engineering with Second Class Upper Division (2.1).",
     "Full-stack web development interest with practical project experience.",
     "Comfortable working with frontend interfaces, backend logic, and databases.",
-    "Able to understand requirements and convert them into organized application features.",
     "Professional background in accounts and data entry, supporting accuracy and responsibility.",
   ];
 
@@ -698,7 +708,7 @@ function About() {
       <div className="mx-auto max-w-[1500px] px-5 py-20 md:px-8">
         <SectionTitle
           eyebrow="About Me"
-          title="A software engineering undergraduate building real, practical web systems."
+          title="A software engineering graduate building real, practical web systems."
           description="I am looking for an opportunity to start my career in software engineering. I enjoy building systems that are clean, organized, useful, and easy for users to understand."
         />
 
@@ -720,41 +730,44 @@ function About() {
             </div>
 
             <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
-             <p>
-    I am a 26-year-old Software Engineering undergraduate at ICBT with a strong
-    interest in full-stack web development, database-driven applications, and
-    practical business software. I enjoy building systems that combine clean user
-    interfaces, organized backend logic, and reliable data management.
-  </p>
+              <p>
+                I am a 26-year-old Software Engineering graduate from ICBT. I
+                completed my Bachelor of Computing in Software Engineering with a
+                Second Class Upper Division (2.1). My main interests are full-stack
+                web development, database-driven applications, and practical business
+                software.
+              </p>
 
-  <p>
-    My main career goal is to become a Junior Software Engineer or Full-Stack Web
-    Developer. I am developing my skills in Java, JavaScript, React, database
-    design, API-based workflows, and software project development. I am especially
-    interested in building applications that solve real user problems and improve
-    everyday business processes.
-  </p>
+              <p>
+                My main career goal is to become a Junior Software Engineer or
+                Full-Stack Web Developer. I am developing my skills in Java,
+                JavaScript, React, database design, API-based workflows, and software
+                project development. I am especially interested in building
+                applications that solve real user problems and improve everyday
+                business processes.
+              </p>
 
-  <p>
-    My project experience includes FitMind and PahanaEdu. Through these projects,
-    I practiced requirement understanding, user flow planning, authentication,
-    CRUD operations, database connectivity, backend logic, and feature testing.
-    These experiences helped me understand how software engineering knowledge can
-    be applied to real-world systems.
-  </p>
+              <p>
+                My project experience includes FitMind and PahanaEdu. Through these
+                projects, I practiced requirement understanding, user flow planning,
+                authentication, CRUD operations, database connectivity, backend logic,
+                and feature testing.
+              </p>
 
-  <p>
-    My previous experience as an Accounts Assistant and Data Entry Operator has
-    helped me build accuracy, responsibility, patience, and the ability to work
-    under pressure. I believe these qualities are important for software
-    development because good developers must be detail-oriented, organized,
-    reliable, and able to communicate clearly with a team.
-  </p>
+              <p>
+                My previous experience as an Accounts Assistant and Data Entry
+                Operator helped me build accuracy, responsibility, patience, and the
+                ability to work under pressure. I believe these qualities are
+                important for software development because good developers must be
+                detail-oriented, organized, reliable, and able to communicate clearly
+                with a team.
+              </p>
 
-  <p>
-    I am currently seeking an opportunity where I can continue learning, contribute
-    to real software projects, and grow into a capable professional developer.
-  </p>
+              <p>
+                I am currently seeking an opportunity where I can continue learning,
+                contribute to real software projects, and grow into a capable
+                professional developer.
+              </p>
             </div>
           </motion.div>
 
@@ -776,10 +789,7 @@ function About() {
               <div className="mt-6 grid gap-4">
                 {profilePoints.map((point) => (
                   <div key={point} className="flex gap-3">
-                    <CheckCircle2
-                      size={20}
-                      className="mt-1 shrink-0 text-cyan-300"
-                    />
+                    <CheckCircle2 size={20} className="mt-1 shrink-0 text-cyan-300" />
                     <p className="leading-7 text-slate-300">{point}</p>
                   </div>
                 ))}
@@ -790,7 +800,7 @@ function About() {
               {
                 title: "Career Goal",
                 text: "To join a software engineering team where I can learn, contribute, and grow as a full-stack or web application developer.",
-                icon: Rocket,
+                icon: Target,
               },
               {
                 title: "Development Mindset",
@@ -814,9 +824,7 @@ function About() {
                   <div className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-cyan-100 text-cyan-700">
                     <Icon size={22} />
                   </div>
-                  <h3 className="text-xl font-black text-slate-950">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-xl font-black text-slate-950">{item.title}</h3>
                   <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
                 </motion.div>
               );
@@ -827,48 +835,17 @@ function About() {
     </section>
   );
 }
+
 function DeveloperSnapshot() {
   const facts = [
-    {
-      label: "Age",
-      value: profile.age,
-      icon: UserRound,
-    },
-    {
-      label: "Career Target",
-      value: profile.careerTarget,
-      icon: Rocket,
-    },
-    {
-      label: "Education",
-      value: "Software Engineering Undergraduate at ICBT",
-      icon: GraduationCap,
-    },
-    {
-      label: "Main Stack",
-      value: profile.mainStack,
-      icon: Code2,
-    },
-    {
-      label: "Projects",
-      value: "FitMind and PahanaEdu",
-      icon: Laptop,
-    },
-    {
-      label: "Languages",
-      value: "Sinhala and English",
-      icon: Languages,
-    },
-    {
-      label: "Work Type",
-      value: profile.workType,
-      icon: BriefcaseBusiness,
-    },
-    {
-      label: "Location",
-      value: "Sri Lanka",
-      icon: MapPin,
-    },
+    { label: "Age", value: profile.age, icon: UserRound },
+    { label: "Career Target", value: profile.careerTarget, icon: Rocket },
+    { label: "Education", value: profile.degree, icon: GraduationCap },
+    { label: "Main Stack", value: profile.mainStack, icon: Code2 },
+    { label: "Projects", value: "FitMind and PahanaEdu", icon: Laptop },
+    { label: "Languages", value: "Sinhala and English", icon: Languages },
+    { label: "Work Type", value: profile.workType, icon: BriefcaseBusiness },
+    { label: "Location", value: "Sri Lanka", icon: MapPin },
   ];
 
   return (
@@ -917,12 +894,13 @@ function DeveloperSnapshot() {
     </section>
   );
 }
+
 function TechStack() {
   return (
     <section className="overflow-hidden border-y border-white/10 bg-slate-950 py-6 text-white">
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
         className="flex w-max gap-4"
       >
         {[...techStack, ...techStack, ...techStack].map((tech, index) => {
@@ -958,7 +936,7 @@ function Skills() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-6 md:grid-cols-3"
+          className="grid gap-6 md:grid-cols-2 xl:grid-cols-4"
         >
           {skills.map((group) => {
             const Icon = group.icon;
@@ -974,13 +952,19 @@ function Skills() {
                   <Icon size={26} />
                 </div>
 
-                <h3 className="text-2xl font-black text-slate-950">
-                  {group.title}
-                </h3>
+                <h3 className="text-2xl font-black text-slate-950">{group.title}</h3>
 
-                <p className="mt-3 leading-7 text-slate-600">
-                  {group.description}
-                </p>
+                <p className="mt-3 leading-7 text-slate-600">{group.description}</p>
+
+                <div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-100">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${group.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"
+                  />
+                </div>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {group.items.map((item) => (
@@ -1004,7 +988,7 @@ function Skills() {
 function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden bg-slate-950">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.18),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(99,102,241,0.22),transparent_35%)]" />
 
       <div className="relative mx-auto max-w-[1500px] px-5 py-20 md:px-8">
         <SectionTitle
@@ -1030,9 +1014,7 @@ function Projects() {
                   <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-300">
                     {project.type}
                   </p>
-                  <h3 className="mt-3 text-4xl font-black text-white">
-                    {project.name}
-                  </h3>
+                  <h3 className="mt-3 text-4xl font-black text-white">{project.name}</h3>
                   <p className="mt-2 text-lg font-bold text-slate-300">
                     {project.subtitle}
                   </p>
@@ -1043,9 +1025,11 @@ function Projects() {
                 </div>
               </div>
 
-              <p className="leading-8 text-slate-300">
-                {project.description}
-              </p>
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-black text-cyan-100">
+                <Zap size={16} /> {project.impact}
+              </div>
+
+              <p className="leading-8 text-slate-300">{project.description}</p>
 
               <div className="mt-6 space-y-3">
                 {project.highlights.map((point) => (
@@ -1096,9 +1080,7 @@ function Experience() {
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
-                  <h3 className="text-3xl font-black text-slate-950">
-                    {job.role}
-                  </h3>
+                  <h3 className="text-3xl font-black text-slate-950">{job.role}</h3>
                   <p className="mt-1 text-lg font-semibold text-slate-600">
                     {job.company}
                   </p>
@@ -1150,13 +1132,15 @@ function Education() {
                 <GraduationCap size={26} />
               </div>
 
+              <span className="mb-4 inline-flex rounded-full bg-cyan-100 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-cyan-800">
+                {item.badge}
+              </span>
+
               <h3 className="text-xl font-black text-slate-950">
                 {item.qualification}
               </h3>
 
-              <p className="mt-3 font-black text-cyan-700">
-                {item.institution}
-              </p>
+              <p className="mt-3 font-black text-cyan-700">{item.institution}</p>
 
               <p className="mt-4 leading-7 text-slate-600">{item.details}</p>
             </motion.div>
@@ -1213,22 +1197,14 @@ function References() {
                 {reference.name}
               </h3>
 
-              <p className="mt-3 leading-7 text-slate-600">
-                {reference.position}
-              </p>
+              <p className="mt-3 leading-7 text-slate-600">{reference.position}</p>
 
               <div className="mt-5 grid gap-2 text-sm font-semibold text-slate-700">
-                <a
-                  href={`tel:${reference.phone}`}
-                  className="inline-flex items-center gap-2 hover:text-cyan-700"
-                >
+                <a href={`tel:${reference.phone}`} className="inline-flex items-center gap-2 hover:text-cyan-700">
                   <Phone size={16} /> {reference.phone}
                 </a>
 
-                <a
-                  href={`mailto:${reference.email}`}
-                  className="inline-flex items-center gap-2 hover:text-cyan-700"
-                >
+                <a href={`mailto:${reference.email}`} className="inline-flex items-center gap-2 hover:text-cyan-700">
                   <Mail size={16} /> {reference.email}
                 </a>
               </div>
@@ -1243,39 +1219,16 @@ function References() {
 function Contact() {
   const contactMethods = useMemo(
     () => [
-      {
-        icon: Mail,
-        label: "Email",
-        value: profile.email,
-        href: `mailto:${profile.email}`,
-      },
-      {
-        icon: Phone,
-        label: "Phone",
-        value: profile.phone,
-        href: `tel:${profile.phone}`,
-      },
-      {
-        icon: MapPin,
-        label: "Address",
-        value: profile.location,
-        href: "#",
-      },
-      {
-        icon: Languages,
-        label: "Languages",
-        value: "Sinhala / English",
-        href: "#",
-      },
+      { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
+      { icon: Phone, label: "Phone", value: profile.phone, href: `tel:${profile.phone}` },
+      { icon: MapPin, label: "Address", value: profile.location, href: "#" },
+      { icon: Languages, label: "Languages", value: "Sinhala / English", href: "#" },
     ],
     []
   );
 
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden bg-slate-950 text-white"
-    >
+    <section id="contact" className="relative overflow-hidden bg-slate-950 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.2),transparent_32%)]" />
 
       <div className="relative mx-auto max-w-[1500px] px-5 py-20 md:px-8">
@@ -1292,8 +1245,7 @@ function Contact() {
 
               <p className="mt-5 max-w-xl leading-8 text-slate-300">
                 I am currently looking for software engineering, web developer,
-                full-stack, front-end, back-end, or junior developer
-                opportunities.
+                full-stack, front-end, back-end, or junior developer opportunities.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-4">
@@ -1351,8 +1303,7 @@ function Footer() {
   return (
     <footer className="border-t border-white/10 bg-slate-950 px-5 py-8 text-center text-sm text-slate-400 md:px-8">
       <p>
-        © {new Date().getFullYear()} {profile.name}. Software Engineering
-        Resume Website.
+        © {new Date().getFullYear()} {profile.name}. Software Engineering Resume Website.
       </p>
     </footer>
   );
