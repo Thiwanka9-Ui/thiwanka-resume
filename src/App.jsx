@@ -35,7 +35,7 @@ const profile = {
   roleLine:
     "Aspiring Software Engineer | Full-Stack Developer | Web Application Developer",
   summary:
-    "Software Engineering graduate with a Second Class Upper Division (2.1) degree and hands-on experience building full-stack, database-driven web applications. I enjoy creating clean interfaces, reliable backend workflows, and practical software that solves real business and user problems.",
+    "Software Engineering graduate with a Second Class Upper Division (2.1) degree and 1.5 years of trainee frontend developer experience at Peercore. I enjoy creating clean interfaces, responsive websites, reliable backend workflows, and practical software that solves real business and user problems.",
   location: "260/1/2, Balummahara, Ibulgoda, Sri Lanka",
   email: "Bandare786thi@yahoo.com",
   phone: "0771326533",
@@ -59,10 +59,10 @@ const navItems = [
 ];
 
 const quickStats = [
-  { value: "2.1", label: "Degree Classification" },
-  { value: "2", label: "Major Projects" },
+  { value: "1.5 yrs", label: "Frontend Trainee" },
+  { value: "4", label: "Software Projects" },
   { value: "Full-Stack", label: "Career Focus" },
-  { value: "ICBT", label: "Software Engineering" },
+  { value: "2.1", label: "Degree Classification" },
 ];
 
 const techStack = [
@@ -142,9 +142,47 @@ const projects = [
     tech: ["Java", "JSP", "Servlets", "MySQL", "MVC", "CRUD"],
     impact: "Organized business workflow",
   },
+  {
+    name: "Ginger Cafe",
+    subtitle: "Responsive Cafe Website",
+    type: "Frontend Website",
+    description:
+      "A modern website created for a cafe brand to present the business, menu items, offers, gallery-style sections, location details, and contact information in a clean and mobile-friendly layout.",
+    highlights: [
+      "Designed a responsive page structure suitable for desktop, tablet, and mobile screens.",
+      "Created clear sections for brand introduction, menu highlights, customer information, and contact details.",
+      "Focused on visual presentation, simple navigation, and a smooth user experience for restaurant customers.",
+    ],
+    tech: ["React", "JavaScript", "HTML", "CSS", "Responsive UI", "Web Design"],
+    impact: "Clean cafe web presence",
+  },
+  {
+    name: "Apfro Constructions",
+    subtitle: "Construction Company Web Page",
+    type: "Business Landing Page",
+    description:
+      "A professional web page designed for a construction company to showcase services, company information, project-style content, trust-building details, and customer contact options.",
+    highlights: [
+      "Built a structured business landing page with service sections and company profile content.",
+      "Used a clean visual hierarchy to make construction services and contact actions easy to understand.",
+      "Focused on responsive design, professional layout, and clear presentation for potential clients.",
+    ],
+    tech: ["React", "JavaScript", "HTML", "CSS", "Landing Page", "Responsive Design"],
+    impact: "Professional company profile",
+  },
 ];
 
 const experience = [
+  {
+    role: "Trainee Frontend Developer",
+    company: "Peercore",
+    period: "1 Year 6 Months",
+    points: [
+      "Gained practical frontend development experience by working on responsive web interfaces and user-focused layouts.",
+      "Improved hands-on skills in HTML, CSS, JavaScript, React concepts, component-based development, and clean UI implementation.",
+      "Collaborated in a professional software environment, followed task requirements, fixed UI issues, and strengthened real-world development discipline.",
+    ],
+  },
   {
     role: "Accounts Assistant",
     company: "Roofing.lk",
@@ -461,8 +499,8 @@ function ProfilePopupCard() {
             <div className="grid gap-4">
               {[
                 ["Age", profile.age],
-                ["Focus", "Full-Stack Web Development"],
-                ["Projects", "FitMind and PahanaEdu"],
+                ["Focus", "Frontend and Full-Stack Web Development"],
+                ["Projects", "FitMind, PahanaEdu, Ginger Cafe and Apfro Constructions"],
                 ["Strength", "Business + software mindset"],
                 ["Goal", "Junior Software Engineering Role"],
               ].map(([label, value]) => (
@@ -698,9 +736,10 @@ function Hero() {
 function About() {
   const profilePoints = [
     "Completed Bachelor of Computing in Software Engineering with Second Class Upper Division (2.1).",
+    "1.5 years of trainee frontend developer experience at Peercore.",
     "Full-stack web development interest with practical project experience.",
     "Comfortable working with frontend interfaces, backend logic, and databases.",
-    "Professional background in accounts and data entry, supporting accuracy and responsibility.",
+    "Business-support experience in accounts and data entry, supporting accuracy and responsibility.",
   ];
 
   return (
@@ -748,16 +787,17 @@ function About() {
               </p>
 
               <p>
-                My project experience includes FitMind and PahanaEdu. Through these
-                projects, I practiced requirement understanding, user flow planning,
-                authentication, CRUD operations, database connectivity, backend logic,
-                and feature testing.
+                My project experience includes FitMind, PahanaEdu, Ginger Cafe, and
+                Apfro Constructions. Through these projects, I practiced requirement
+                understanding, user flow planning, responsive UI design, authentication,
+                CRUD operations, database connectivity, backend logic, and feature testing.
               </p>
 
               <p>
-                My previous experience as an Accounts Assistant and Data Entry
-                Operator helped me build accuracy, responsibility, patience, and the
-                ability to work under pressure. I believe these qualities are
+                My experience as a Trainee Frontend Developer at Peercore helped me gain
+                practical frontend development exposure, while my previous accounts and
+                data entry roles helped me build accuracy, responsibility, patience, and
+                the ability to work under pressure. I believe these qualities are
                 important for software development because good developers must be
                 detail-oriented, organized, reliable, and able to communicate clearly
                 with a team.
@@ -842,7 +882,7 @@ function DeveloperSnapshot() {
     { label: "Career Target", value: profile.careerTarget, icon: Rocket },
     { label: "Education", value: profile.degree, icon: GraduationCap },
     { label: "Main Stack", value: profile.mainStack, icon: Code2 },
-    { label: "Projects", value: "FitMind and PahanaEdu", icon: Laptop },
+    { label: "Projects", value: "FitMind, PahanaEdu, Ginger Cafe and Apfro Constructions", icon: Laptop },
     { label: "Languages", value: "Sinhala and English", icon: Languages },
     { label: "Work Type", value: profile.workType, icon: BriefcaseBusiness },
     { label: "Location", value: "Sri Lanka", icon: MapPin },
@@ -1065,7 +1105,7 @@ function Experience() {
         <SectionTitle
           eyebrow="Experience"
           title="Professional experience that supports my software career"
-          description="My previous roles helped me build accuracy, responsibility, business understanding, and a detail-oriented mindset."
+          description="My latest frontend trainee role and previous business-support roles helped me build practical development exposure, accuracy, responsibility, and a detail-oriented mindset."
         />
 
         <div className="grid gap-6">
