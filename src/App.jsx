@@ -35,7 +35,7 @@ const profile = {
   roleLine:
     "Aspiring Software Engineer | Full-Stack Developer | Web Application Developer",
   summary:
-    "Software Engineering graduate with a Second Class Upper Division (2.1) degree and 1.5 years of trainee frontend developer experience at Peercore. I enjoy creating clean interfaces, responsive websites, reliable backend workflows, and practical software that solves real business and user problems.",
+    "Software Engineering graduate with a Second Class Upper Division (2.1) degree and hands-on experience building full-stack, database-driven web applications. I enjoy creating clean interfaces, responsive websites, reliable backend workflows, and practical software that solves real business and user problems.",
   location: "260/1/2, Balummahara, Ibulgoda, Sri Lanka",
   email: "Bandare786thi@yahoo.com",
   phone: "0771326533",
@@ -59,10 +59,10 @@ const navItems = [
 ];
 
 const quickStats = [
-  { value: "1.5 yrs", label: "Frontend Trainee" },
+  { value: "2.1", label: "Degree Classification" },
   { value: "4", label: "Software Projects" },
   { value: "Full-Stack", label: "Career Focus" },
-  { value: "2.1", label: "Degree Classification" },
+  { value: "ICBT", label: "Software Engineering" },
 ];
 
 const techStack = [
@@ -99,7 +99,14 @@ const skills = [
     title: "Database Systems",
     description:
       "Designing and working with relational databases for practical business and web application requirements.",
-    items: ["MySQL", "PostgreSQL", "Database Design", "Queries", "Data Accuracy", "Reports"],
+    items: [
+      "MySQL",
+      "PostgreSQL",
+      "Database Design",
+      "Queries",
+      "Data Accuracy",
+      "Reports",
+    ],
     icon: Database,
     level: 82,
   },
@@ -107,7 +114,14 @@ const skills = [
     title: "Professional Strengths",
     description:
       "A reliable work style built through accounts, data entry, documentation, and business-support experience.",
-    items: ["Teamwork", "Communication", "Accuracy", "Documentation", "Deadlines", "Problem Solving"],
+    items: [
+      "Teamwork",
+      "Communication",
+      "Accuracy",
+      "Documentation",
+      "Deadlines",
+      "Problem Solving",
+    ],
     icon: Award,
     level: 90,
   },
@@ -167,22 +181,19 @@ const projects = [
       "Used a clean visual hierarchy to make construction services and contact actions easy to understand.",
       "Focused on responsive design, professional layout, and clear presentation for potential clients.",
     ],
-    tech: ["React", "JavaScript", "HTML", "CSS", "Landing Page", "Responsive Design"],
+    tech: [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Landing Page",
+      "Responsive Design",
+    ],
     impact: "Professional company profile",
   },
 ];
 
 const experience = [
-  {
-    role: "Trainee Frontend Developer",
-    company: "Peercore",
-    period: "1 Year 6 Months",
-    points: [
-      "Gained practical frontend development experience by working on responsive web interfaces and user-focused layouts.",
-      "Improved hands-on skills in HTML, CSS, JavaScript, React concepts, component-based development, and clean UI implementation.",
-      "Collaborated in a professional software environment, followed task requirements, fixed UI issues, and strengthened real-world development discipline.",
-    ],
-  },
   {
     role: "Accounts Assistant",
     company: "Roofing.lk",
@@ -422,7 +433,9 @@ function FloatingCodeCards() {
           <p>
             <span className="text-cyan-300">class</span> = "2.1";
           </p>
-          <p>career.launch(<span className="text-white">"software"</span>);</p>
+          <p>
+            career.launch(<span className="text-white">"software"</span>);
+          </p>
         </div>
       </motion.div>
 
@@ -499,7 +512,7 @@ function ProfilePopupCard() {
             <div className="grid gap-4">
               {[
                 ["Age", profile.age],
-                ["Focus", "Frontend and Full-Stack Web Development"],
+                ["Focus", "Full-Stack Web Development"],
                 ["Projects", "FitMind, PahanaEdu, Ginger Cafe and Apfro Constructions"],
                 ["Strength", "Business + software mindset"],
                 ["Goal", "Junior Software Engineering Role"],
@@ -736,7 +749,6 @@ function Hero() {
 function About() {
   const profilePoints = [
     "Completed Bachelor of Computing in Software Engineering with Second Class Upper Division (2.1).",
-    "1.5 years of trainee frontend developer experience at Peercore.",
     "Full-stack web development interest with practical project experience.",
     "Comfortable working with frontend interfaces, backend logic, and databases.",
     "Business-support experience in accounts and data entry, supporting accuracy and responsibility.",
@@ -794,10 +806,9 @@ function About() {
               </p>
 
               <p>
-                My experience as a Trainee Frontend Developer at Peercore helped me gain
-                practical frontend development exposure, while my previous accounts and
-                data entry roles helped me build accuracy, responsibility, patience, and
-                the ability to work under pressure. I believe these qualities are
+                My previous experience as an Accounts Assistant and Data Entry
+                Operator helped me build accuracy, responsibility, patience, and the
+                ability to work under pressure. I believe these qualities are
                 important for software development because good developers must be
                 detail-oriented, organized, reliable, and able to communicate clearly
                 with a team.
@@ -882,7 +893,11 @@ function DeveloperSnapshot() {
     { label: "Career Target", value: profile.careerTarget, icon: Rocket },
     { label: "Education", value: profile.degree, icon: GraduationCap },
     { label: "Main Stack", value: profile.mainStack, icon: Code2 },
-    { label: "Projects", value: "FitMind, PahanaEdu, Ginger Cafe and Apfro Constructions", icon: Laptop },
+    {
+      label: "Projects",
+      value: "FitMind, PahanaEdu, Ginger Cafe and Apfro Constructions",
+      icon: Laptop,
+    },
     { label: "Languages", value: "Sinhala and English", icon: Languages },
     { label: "Work Type", value: profile.workType, icon: BriefcaseBusiness },
     { label: "Location", value: "Sri Lanka", icon: MapPin },
@@ -915,7 +930,7 @@ function DeveloperSnapshot() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl shadow-slate-950/20 backdrop-blur-xl transition hover:bg-white/[0.09]"
               >
-                <div className="mb-5 grid h-13 w-13 place-items-center rounded-2xl bg-cyan-300 text-slate-950 shadow-lg shadow-cyan-500/20 transition group-hover:rotate-6 group-hover:scale-110">
+                <div className="mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-cyan-300 text-slate-950 shadow-lg shadow-cyan-500/20 transition group-hover:rotate-6 group-hover:scale-110">
                   <Icon size={24} />
                 </div>
 
@@ -1054,7 +1069,9 @@ function Projects() {
                   <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-300">
                     {project.type}
                   </p>
-                  <h3 className="mt-3 text-4xl font-black text-white">{project.name}</h3>
+                  <h3 className="mt-3 text-4xl font-black text-white">
+                    {project.name}
+                  </h3>
                   <p className="mt-2 text-lg font-bold text-slate-300">
                     {project.subtitle}
                   </p>
@@ -1105,7 +1122,7 @@ function Experience() {
         <SectionTitle
           eyebrow="Experience"
           title="Professional experience that supports my software career"
-          description="My latest frontend trainee role and previous business-support roles helped me build practical development exposure, accuracy, responsibility, and a detail-oriented mindset."
+          description="My previous business-support roles helped me build accuracy, responsibility, business understanding, and a detail-oriented mindset."
         />
 
         <div className="grid gap-6">
@@ -1240,11 +1257,17 @@ function References() {
               <p className="mt-3 leading-7 text-slate-600">{reference.position}</p>
 
               <div className="mt-5 grid gap-2 text-sm font-semibold text-slate-700">
-                <a href={`tel:${reference.phone}`} className="inline-flex items-center gap-2 hover:text-cyan-700">
+                <a
+                  href={`tel:${reference.phone}`}
+                  className="inline-flex items-center gap-2 hover:text-cyan-700"
+                >
                   <Phone size={16} /> {reference.phone}
                 </a>
 
-                <a href={`mailto:${reference.email}`} className="inline-flex items-center gap-2 hover:text-cyan-700">
+                <a
+                  href={`mailto:${reference.email}`}
+                  className="inline-flex items-center gap-2 hover:text-cyan-700"
+                >
                   <Mail size={16} /> {reference.email}
                 </a>
               </div>
@@ -1259,8 +1282,18 @@ function References() {
 function Contact() {
   const contactMethods = useMemo(
     () => [
-      { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
-      { icon: Phone, label: "Phone", value: profile.phone, href: `tel:${profile.phone}` },
+      {
+        icon: Mail,
+        label: "Email",
+        value: profile.email,
+        href: `mailto:${profile.email}`,
+      },
+      {
+        icon: Phone,
+        label: "Phone",
+        value: profile.phone,
+        href: `tel:${profile.phone}`,
+      },
       { icon: MapPin, label: "Address", value: profile.location, href: "#" },
       { icon: Languages, label: "Languages", value: "Sinhala / English", href: "#" },
     ],
